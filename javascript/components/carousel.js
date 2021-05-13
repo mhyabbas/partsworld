@@ -38,7 +38,7 @@ function carouselBrand() {
 
 	var mediaQuery = window.matchMedia('(min-width: 1200px)');
 
-	function checkPagination(e) {
+	function checkPaginationInit(e) {
 		if (e.matches) {
 			if (items <= perPageDesktop) {
 		    	splide.options = { pagination: false };
@@ -54,8 +54,29 @@ function carouselBrand() {
 		}
 	}
 
-	mediaQuery.addListener(checkPagination)
-	checkPagination(mediaQuery)
+	function checkPaginationChange(e) {
+		if (e.matches) {
+			setTimeout(function(){ 
+				if (items <= perPageDesktop) {
+			    	splide.options = { pagination: false };
+				} else {
+			    	splide.options = { pagination: true };
+				}
+			}, 200);
+		} else {
+			setTimeout(function(){ 
+				if (items <= perPageTablet) {
+					splide.options = { pagination: false };
+				} else {
+					splide.options = { pagination: true };
+				}
+			}, 200);
+		}
+	}
+
+	mediaQuery.addListener(checkPaginationChange);
+	checkPaginationInit(mediaQuery);
+	checkPaginationChange(mediaQuery);
 }
 
 export {carouselHero,carouselBrand};
