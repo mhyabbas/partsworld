@@ -1,0 +1,109 @@
+.form__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.form__field {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 50%;
+	flex: 1 0 50%;
+}
+
+.form__group div:first-of-type input {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right: none;
+}
+
+.form__group div:last-of-type input {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 10px;
+	color: #383838;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+label span {
+	margin-left: 5px;
+	color: #A7A7A7;
+	font-weight: normal;
+	text-transform: none;
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select {
+	display: block;
+	margin-bottom: 20px;
+	padding: 15px;
+	width: 100%;
+	background-color: #FFFFFF;
+	border: 1px solid #A7A7A7;
+	border-radius: 4px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+	outline: none;
+	-webkit-box-shadow: 0 0 0 1px #D51F26;
+	        box-shadow: 0 0 0 1px #D51F26;
+}
+
+/*Dropdown*/
+.choices {
+	margin-bottom: 20px !important;
+}
+
+.choices:after {
+	content: ' ';
+	position: absolute;
+	right: 14px !important;
+	top: 16px !important;
+	margin-top: 0 !important;
+	width: 24px !important;
+	height: 24px !important;
+	background: url('../../assets/icon-arrow-down.svg') no-repeat center center/24px 24px;
+	border: none !important;
+	pointer-events: none;
+}
+
+.choices.is-open:after {
+	background: url('../../assets/icon-arrow-up.svg') no-repeat center center/24px 24px;
+}
+
+.choices__inner {
+	display: block;
+	padding: 14px 15px !important;
+	width: 100%;
+	background-color: #FFFFFF;
+	border: 1px solid #A7A7A7;
+	border-radius: 4px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+.choices.is-focused {
+	-webkit-box-shadow: 0 0 0 1px #D51F26;
+	        box-shadow: 0 0 0 1px #D51F26;
+	border-radius: 4px;
+}
+
+.choices__list {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.choices__placeholder {
+     opacity: 1;
+}

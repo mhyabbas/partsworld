@@ -1,0 +1,16 @@
+.header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+	background-color: #E9D903;
+}
+
+@media all and (min-width: 1200px) {
+	.header {
+        padding-top: 70px;
+        padding-bottom: 70px;
+	}
+
+	.header .row > div:last-of-type {
+		padding-left: 30px;
+	}
+}

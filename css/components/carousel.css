@@ -1,0 +1,213 @@
+/*General*/
+.splide {
+	padding-bottom: 40px;
+}
+
+.splide__slide {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+/*Dot pagination*/
+.splide__pagination {
+	margin: 12px 0;
+	padding: 0;
+	width: 100%;
+}
+
+.splide__pagination__page {
+	margin: 0 8px;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	background-color: white;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+}
+
+.splide__pagination__page:focus {
+	outline: none;
+}
+
+.splide__pagination__page:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.splide__pagination__page.is-active {
+	background-color: rgba(0,0,0,0.5);
+}
+
+/*Arrows*/
+.splide__arrows {
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	top: 100%;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.splide__arrows button {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border: 3px solid #383838;
+	border-radius: 5px;
+	outline: 0;
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.splide__arrows button:hover {
+	background-color: #383838;
+}
+
+.splide__arrows button:disabled {
+	visibility: hidden;
+}
+
+.splide__arrow--prev {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.splide__arrows svg {
+	fill: #383838;
+	width: 20px;
+	height: 20px;
+}
+
+.splide__arrows button:hover svg {
+	fill: white;
+}
+
+/*Hero*/
+.carousel--hero .splide__arrows {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 500px;
+}
+
+.carousel--hero .splide__slide > img {
+	margin: 0 auto 30px;
+	width: 100%;
+	max-width: 500px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+	        box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+}
+
+.promo {
+	position: relative;
+	margin: 0 auto 30px;
+	width: 100%;
+	max-width: 500px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+	        box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+
+.promo__footer {
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	bottom: 0;
+	padding: 30px;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(30%, rgba(0,0,0,0.8)), to(#000000));
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 30%, #000000 100%);
+	background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 30%, #000000 100%);
+}
+
+.promo__title {
+	color: white;
+	font-size: 22px;
+}
+
+/*Our brands*/
+.carousel--brand a {
+	margin: 0 auto;
+}
+
+.carousel--brand img {
+	max-width: 100px;
+	max-height: 35px;
+	margin: 20px auto;
+}
+
+.carousel--brand .splide__pagination__page {
+	background-color: #D9D9D9;
+}
+
+.carousel--brand .splide__pagination__page:hover {
+	background-color: #D51F26;
+}
+
+.carousel--brand .splide__pagination__page.is-active {
+	background-color: #D51F26;
+}
+
+@media all and (min-width: 1200px) {
+	/*Hero*/
+	.carousel--hero .splide__arrows {
+		max-width: 98%;
+	}
+
+	.carousel--hero .splide__slide > img {
+		max-width: 98%;
+	}
+
+	.promo {
+		max-width: 98%;
+	}
+
+	.promo__footer {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+
+	.promo__title {
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		margin-bottom: 0;
+	}
+
+	/*Our brands*/
+	.carousel--brand img {
+		max-width: 190px;
+		max-height: 70px;
+	}
+}

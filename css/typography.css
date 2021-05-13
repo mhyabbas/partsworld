@@ -1,0 +1,110 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #383838;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h1 strong {
+    position: relative;
+    font-weight: 500;
+}
+
+h1 strong::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: -12px;
+    right: -12px;
+    height: 14px;
+    background-image: url("../assets/underline.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h2.small {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    color: #383838;
+}
+
+p.lead {
+    font-size: 20px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #D1D1D1;
+}
+
+a {
+    color: #D51F26;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    -webkit-box-shadow: 0 0 0 1px #D51F26;
+            box-shadow: 0 0 0 1px #D51F26;;
+}
+
+@media all and (min-width: 1200px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,488 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Parts World</title>
+        <meta name="description" content="Parts World">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+    </head>
+    <body>
+        <!-- SVG symbols -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="icon-arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>Arrow Down</title>
+                <path d="M19.9,6.3a1.52,1.52,0,0,1,2.3,0,1.69,1.69,0,0,1,0,2.3l-8.6,9a2.12,2.12,0,0,1-3.1,0L1.8,8.5a1.69,1.69,0,0,1,0-2.3,1.52,1.52,0,0,1,2.3,0L12,14.4Z"/>
+            </symbol>
+            <symbol id="icon-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>Download</title>
+                <path d="M17,11l-1.4-1.4L13,12.2V2h-2v10.2L8.4,9.6L7,11l5,5L17,11z M5,20v-8H3v8c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-8h-2v8H5z"/>
+            </symbol>
+            <symbol id="icon-email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>Email</title>
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </symbol>
+            <symbol id="icon-location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>Location</title>
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+            </symbol>
+            <symbol id="icon-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>Phone</title>
+                <path d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51m9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19M7.5 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1z"/>
+            </symbol>
+            <symbol id="icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>Mobile</title>
+                <path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/>
+            </symbol>
+        </svg>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__logo">
+                    <a href="#"><img src="assets/logo.jpg" alt="logo"></a>
+                </li>
+                <li class="nav__item">
+                    <a href="#locations" class="nav__btn">
+                        <span class="nav__icon">
+                            <svg><use xlink:href="#icon-email"/></svg>
+                        </span>
+                        <span class="nav__text">
+                            Contact Us
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="nav nav--location">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="tel:3385141" class="nav__link"><strong>Suva</strong><br>Phone: 338 5141</a>
+                </li>
+                <li class="nav__item">
+                    <a href="tel:6707206" class="nav__link"><strong>Nadi</strong><br>Phone: 670 7206</a>
+                </li>
+                <li class="nav__item">
+                    <a href="tel:8814239" class="nav__link"><strong>Labasa</strong><br>Phone: 881 4239</a>
+                </li>
+                <li class="nav__item">
+                    <a href="tel:6673822" class="nav__link"><strong>Ba</strong><br>Phone: 667 3822</a>
+                </li>
+                <li class="nav__item">
+                    <a href="tel:6681764" class="nav__link"><strong>Tavua</strong><br>Phone: 668 1764</a>
+                </li>
+                <li class="nav__item">
+                    <a href="tel:8880166" class="nav__link"><strong>Taveuni</strong><br>Phone: 888 0166</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h1>The highest quality products at the <strong>best&nbsp;prices</strong></h1>
+                        <p class="lead">Parts World stands for reliability, derived from our commitment to supplying our customers with the highest quality products at the best prices. Since our establishment in 2002, we have grown to become a leading provider of aftermarket parts in Fiji. With our head office in Suva and branches in Ba, Tavua, Nadi, Labasa and Taveuni, we serve customers around the country. Our goal is to provide not only quality products and customer service, but the expertise and after support to fulfill all our customers’ needs.</p>
+                    </div>
+                    <div class="column">
+                        <div class="splide carousel--hero">
+                            <div class="splide__slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <div class="promo">                            
+                                                <img class="promo__image" src="assets/hero.png" alt="hero image">
+                                                <div class="promo__footer">
+                                                    <h2 class="promo__title">Latest promotions</h2>
+                                                    <a class="btn btn--icon" href=""><svg><use xlink:href="#icon-download"/></svg>Download</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="splide__slide">
+                                            <div class="promo">                            
+                                                <img class="promo__image" src="assets/hero.png" alt="hero image">
+                                                <div class="promo__footer">
+                                                    <h2 class="promo__title">Latest promotions</h2>
+                                                    <a class="btn btn--icon" href=""><svg><use xlink:href="#icon-download"/></svg>Download</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/hero.png" alt="hero image">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/hero.png" alt="hero image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
+                <h2 class="small text--center">Our brands</h2>
+                <div class="splide carousel--brand">
+                    <div class="splide__slider">
+                        <div class="splide__track">
+                            <div class="splide__list">
+                                <div class="splide__slide">
+                                    <a href=""><img src="assets/sparex.png" alt="brand logo"></a>
+                                </div>
+                                <div class="splide__slide">
+                                    <a href=""><img src="assets/king steel.png" alt="brand logo"></a>
+                                </div>
+                                <div class="splide__slide">
+                                    <a href=""><img src="assets/ceat.png" alt="brand logo"></a>
+                                </div>
+                                <div class="splide__slide">
+                                    <a href=""><img src="assets/crc.png" alt="brand logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="locations" class="bg--grey">
+            <div class="container">
+                <h2>Our locations</h2>
+                <div class="accordion">
+                    <h3 class="accordion__title active">Head office
+                        <svg class="accordion__arrow-down"><use xlink:href="#icon-arrow-down"/></svg>
+                    </h3>
+                    <div class="accordion__panel active">
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-location"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Address:</strong> 5 Jerusalem Rd Suva G.P.O Box 141 Suva
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-phone"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Phone:</strong> <a href="tel:3384131">338 4131</a> / <a href="tel:3385141">338 5141</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-mobile"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Mobile:</strong> <a href="tel:9992570 ">999 2570</a> / <a href="tel:9992567">999 2567</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-email"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Email:</strong> <a href="mailto:suvapw@nivismotors.com">suvapw@nivismotors.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__panel-map active">
+                        <div class="accordion__panel-map-intro">
+                            <p>Intro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua.</p>
+                        </div>
+                        <div class="accordion__panel-map-wrapper">
+                            <iframe class="accordion__panel-map-item" title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.9305266413307!2d178.46283181488684!3d-18.120999187642877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e1bde1249abad6b%3A0xef2bec27bec46d2d!2s5%20Jerusalem%20Rd%2C%20Suva%2C%20Fiji!5e0!3m2!1sen!2snz!4v1620871160379!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <h3 class="accordion__title">Nadi branch
+                        <svg class="accordion__arrow-down"><use xlink:href="#icon-arrow-down"/></svg>
+                    </h3>
+                    <div class="accordion__panel">
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-location"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Address:</strong> Nadi branch
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-phone"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Phone:</strong> <a href="tel:3384131">338 4131</a> / <a href="tel:3385141">338 5141</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-mobile"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Mobile:</strong> <a href="tel:9992570 ">999 2570</a> / <a href="tel:9992567">999 2567</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-email"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Email:</strong> <a href="mailto:suvapw@nivismotors.com">suvapw@nivismotors.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__panel-map">
+                        <div class="accordion__panel-map-intro">
+                            <p>Intro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua.</p>
+                        </div>
+                        <div class="accordion__panel-map-wrapper">
+                            <iframe class="accordion__panel-map-item" title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.9305266413307!2d178.46283181488684!3d-18.120999187642877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e1bde1249abad6b%3A0xef2bec27bec46d2d!2s5%20Jerusalem%20Rd%2C%20Suva%2C%20Fiji!5e0!3m2!1sen!2snz!4v1620871160379!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <h3 class="accordion__title">Ba branch
+                        <svg class="accordion__arrow-down"><use xlink:href="#icon-arrow-down"/></svg>
+                    </h3>
+                    <div class="accordion__panel">
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-location"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Address:</strong> Ba branch
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-phone"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Phone:</strong> <a href="tel:3384131">338 4131</a> / <a href="tel:3385141">338 5141</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-mobile"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Mobile:</strong> <a href="tel:9992570 ">999 2570</a> / <a href="tel:9992567">999 2567</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-email"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Email:</strong> <a href="mailto:suvapw@nivismotors.com">suvapw@nivismotors.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__panel-map">
+                        <div class="accordion__panel-map-intro">
+                            <p>Intro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua.</p>
+                        </div>
+                        <div class="accordion__panel-map-wrapper">
+                            <iframe class="accordion__panel-map-item" title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.9305266413307!2d178.46283181488684!3d-18.120999187642877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e1bde1249abad6b%3A0xef2bec27bec46d2d!2s5%20Jerusalem%20Rd%2C%20Suva%2C%20Fiji!5e0!3m2!1sen!2snz!4v1620871160379!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <h3 class="accordion__title">Tavua branch
+                        <svg class="accordion__arrow-down"><use xlink:href="#icon-arrow-down"/></svg>
+                    </h3>
+                    <div class="accordion__panel">
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-location"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Address:</strong> Tavua branch
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-phone"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Phone:</strong> <a href="tel:3384131">338 4131</a> / <a href="tel:3385141">338 5141</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-mobile"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Mobile:</strong> <a href="tel:9992570 ">999 2570</a> / <a href="tel:9992567">999 2567</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-email"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Email:</strong> <a href="mailto:suvapw@nivismotors.com">suvapw@nivismotors.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__panel-map">
+                        <div class="accordion__panel-map-intro">
+                            <p>Intro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua.</p>
+                        </div>
+                        <div class="accordion__panel-map-wrapper">
+                            <iframe class="accordion__panel-map-item" title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.9305266413307!2d178.46283181488684!3d-18.120999187642877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e1bde1249abad6b%3A0xef2bec27bec46d2d!2s5%20Jerusalem%20Rd%2C%20Suva%2C%20Fiji!5e0!3m2!1sen!2snz!4v1620871160379!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <h3 class="accordion__title">Lavasa branch
+                        <svg class="accordion__arrow-down"><use xlink:href="#icon-arrow-down"/></svg>
+                    </h3>
+                    <div class="accordion__panel">
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-location"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Address:</strong> Lavasa branch
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-phone"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Phone:</strong> <a href="tel:3384131">338 4131</a> / <a href="tel:3385141">338 5141</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-mobile"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Mobile:</strong> <a href="tel:9992570 ">999 2570</a> / <a href="tel:9992567">999 2567</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-email"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Email:</strong> <a href="mailto:suvapw@nivismotors.com">suvapw@nivismotors.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__panel-map">
+                        <div class="accordion__panel-map-intro">
+                            <p>Intro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua.</p>
+                        </div>
+                        <div class="accordion__panel-map-wrapper">
+                            <iframe class="accordion__panel-map-item" title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.9305266413307!2d178.46283181488684!3d-18.120999187642877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e1bde1249abad6b%3A0xef2bec27bec46d2d!2s5%20Jerusalem%20Rd%2C%20Suva%2C%20Fiji!5e0!3m2!1sen!2snz!4v1620871160379!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <h3 class="accordion__title">Taveuni branch
+                        <svg class="accordion__arrow-down"><use xlink:href="#icon-arrow-down"/></svg>
+                    </h3>
+                    <div class="accordion__panel">
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-location"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Address:</strong> Taveuni branch
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-phone"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Phone:</strong> <a href="tel:3384131">338 4131</a> / <a href="tel:3385141">338 5141</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-mobile"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Mobile:</strong> <a href="tel:9992570 ">999 2570</a> / <a href="tel:9992567">999 2567</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media__item">
+                                <svg><use xlink:href="#icon-email"/></svg>
+                            </div>
+                            <div class="media__body">
+                                <strong>Email:</strong> <a href="mailto:suvapw@nivismotors.com">suvapw@nivismotors.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__panel-map">
+                        <div class="accordion__panel-map-intro">
+                            <p>Intro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua.</p>
+                        </div>
+                        <div class="accordion__panel-map-wrapper">
+                            <iframe class="accordion__panel-map-item" title="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.9305266413307!2d178.46283181488684!3d-18.120999187642877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e1bde1249abad6b%3A0xef2bec27bec46d2d!2s5%20Jerusalem%20Rd%2C%20Suva%2C%20Fiji!5e0!3m2!1sen!2snz!4v1620871160379!5m2!1sen!2snz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="box-shadow">
+            <div class="container container--narrow">
+                <h2>Contact us</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <form>
+                    <div class="form__row form__group">
+                        <div class="form__field">
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname"/>
+                        </div>
+                        <div class="form__field">
+                            <label for="lname">Last name</label>
+                            <input type="text" name="lname"/>
+                        </div>
+                    </div>
+                    <label for="product">Enquiry type <span>(Optional)</span></label>
+                    <select class="form__dropdown" name="product" data-trigger>
+                        <option value="">Product enquiry</option>
+                        <option value="1">Enquiry Type 1</option>
+                        <option value="2">Enquiry Type 2</option>
+                        <option value="3">Enquiry Type 3</option>
+                    </select>
+                    <label for="message">Message</label>
+                    <textarea name="message" placeholder="Enter your message" rows="5"></textarea>
+                    <a class="btn btn--outline" href="">Send message</a>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer__list">
+                    <li class="footer__item">Parts World Copyright © 2021</li>
+                    <li class="footer__item"><a href="" class="footer__link">Terms and conditions</a></li>
+                    <li class="footer__item"><a href="" class="footer__link">Privacy</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="javascript/plugins/smoothscroll.min.js"></script>
+        <script src="javascript/plugins/splide.min.js"></script>
+        <script src="javascript/plugins/choices.min.js"></script>
+        <script type="module" src="javascript/main.js"></script>
+    </body>
+</html>
